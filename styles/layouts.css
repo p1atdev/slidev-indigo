@@ -1,0 +1,427 @@
+/* Dimensions follow the supplied 1280 × 720 HTML reference. */
+.slidev-layout {
+  font-family: var(--indigo-sans);
+  font-size: 20px;
+  line-height: 1.75;
+  color: var(--color-2);
+  background: var(--indigo-paper);
+  -webkit-font-smoothing: antialiased;
+  font-synthesis: none;
+  text-wrap: pretty;
+}
+.slidev-layout.indigo-frame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 32px 72px 72px;
+}
+.indigo-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 13px;
+  background: var(--color-6);
+}
+.indigo-frame.indigo-has-note {
+  padding-bottom: 108px;
+}
+.indigo-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+}
+.indigo-eyebrow {
+  flex: none;
+  margin-bottom: 25px;
+  color: var(--color-6);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.19em;
+}
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3,
+.slidev-layout h4 {
+  margin: 0;
+  color: var(--color-2);
+  font-family: var(--indigo-display);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+.indigo-body > h1 {
+  flex: none;
+  padding-bottom: 16px;
+  margin: 0 0 16px;
+  border-bottom: 1px solid var(--indigo-line);
+  font-size: 48px;
+  line-height: 1.2;
+}
+.slidev-layout h2 {
+  font-size: 40px;
+  line-height: 1.45;
+}
+.slidev-layout h3 {
+  font-size: 32px;
+  line-height: 1.45;
+}
+.slidev-layout h4 {
+  font-size: 28px;
+  line-height: 1.5;
+}
+.slidev-layout p {
+  margin: 0 0 24px;
+  line-height: 1.75;
+}
+.slidev-layout h2 + p,
+.slidev-layout h3 + p {
+  margin-top: 14px;
+}
+.slidev-layout p + h2,
+.slidev-layout ul + h2 {
+  margin-top: 24px;
+}
+.slidev-layout .lead {
+  color: var(--indigo-muted);
+  font-size: 24px;
+  line-height: 1.75;
+}
+.slidev-layout strong {
+  font-weight: 700;
+  color: var(--color-3);
+}
+.slidev-layout em {
+  font-style: normal;
+  color: var(--color-6);
+}
+.slidev-layout ul,
+.slidev-layout ol {
+  margin: 0 0 8px;
+  padding: 0;
+}
+.slidev-layout ul {
+  list-style: square;
+}
+.slidev-layout li {
+  margin-block: 4px;
+  line-height: 1.75;
+}
+.slidev-layout li::marker {
+  color: var(--color-6);
+}
+.slidev-layout a {
+  color: var(--color-5);
+  border: 0;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+.slidev-layout a:hover {
+  color: var(--color-6);
+}
+.slidev-layout a:focus-visible {
+  outline: 3px solid var(--color-7);
+  outline-offset: 4px;
+}
+.slidev-layout hr {
+  margin: 22px 0;
+  border: 0;
+  border-top: 1px solid var(--indigo-line);
+}
+.slidev-layout blockquote {
+  margin: 20px 0;
+  padding: 14px 22px;
+  border: 0;
+  border-left: 4px solid var(--color-6);
+  border-radius: 0;
+  background: var(--indigo-surface);
+  color: var(--indigo-muted);
+  font-size: inherit;
+}
+.slidev-layout blockquote p:last-child {
+  margin-bottom: 0;
+}
+.slidev-layout table {
+  width: 100%;
+  margin: 12px 0 18px;
+  border-collapse: collapse;
+  font-size: 20px;
+}
+.slidev-layout th {
+  background: var(--indigo-surface);
+  font-weight: 700;
+  color: var(--color-2);
+}
+.slidev-layout th,
+.slidev-layout td {
+  padding: 15px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--indigo-line);
+}
+.slidev-layout kbd {
+  font-family: var(--indigo-sans);
+  font-size: 0.85em;
+}
+.indigo-footer {
+  position: absolute;
+  inset: auto 92px 34px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  color: var(--indigo-muted);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+.indigo-page {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+}
+.indigo-note {
+  position: absolute;
+  inset: auto 72px 32px;
+  color: var(--indigo-muted);
+  font-size: 16px;
+  line-height: 1.4;
+}
+.indigo-note p {
+  margin: 0;
+}
+
+/* Covers and section dividers retain the reference's flat composition. */
+.indigo-frame.indigo-dark {
+  color: white;
+  background: var(--color-4);
+}
+.indigo-dark .indigo-eyebrow,
+.indigo-dark .indigo-footer {
+  color: var(--indigo-on-dark);
+}
+.indigo-dark h1,
+.indigo-dark h2,
+.indigo-dark h3,
+.indigo-dark strong {
+  color: white;
+}
+.indigo-dark p {
+  color: var(--indigo-on-dark);
+}
+.indigo-dark a {
+  color: var(--indigo-on-dark);
+}
+.indigo-frame.cover {
+  padding-top: 85px;
+}
+.cover::before {
+  display: none;
+}
+.cover .indigo-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 0;
+  letter-spacing: 0.23em;
+}
+.cover .indigo-eyebrow::before {
+  content: "";
+  width: 14px;
+  height: 15px;
+  background: var(--color-8);
+}
+.cover .indigo-body {
+  justify-content: flex-start;
+}
+.indigo-cover-copy {
+  width: 100%;
+  padding-top: 80px;
+}
+.indigo-with-palette .indigo-cover-copy {
+  width: 70%;
+  padding-right: 28px;
+}
+.indigo-cover-copy h1,
+.indigo-section-copy h1 {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-size: 72px;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+.indigo-cover-copy h1::after {
+  content: "";
+  display: block;
+  margin-top: 64px;
+  width: 106px;
+  height: 6px;
+  background: var(--color-8);
+}
+.indigo-cover-copy p {
+  margin: 25px 0 0;
+  max-width: 720px;
+  font-size: 24px;
+  line-height: 1.7;
+}
+.indigo-cover-art {
+  position: absolute;
+  top: 64px;
+  right: 0px;
+  width: 400px;
+  height: 400px;
+}
+.indigo-cover-range {
+  display: block;
+  margin-top: 19px;
+  font-size: 11px;
+  color: var(--indigo-on-dark);
+  letter-spacing: 0.3em;
+}
+.indigo-frame.section {
+  padding-top: 132px;
+  /* background: var(--color-2); */
+}
+.section::before {
+  width: 16px;
+  /* background: var(--color-8); */
+}
+.section .indigo-eyebrow {
+  margin-bottom: 65px;
+}
+.indigo-section-copy {
+  position: relative;
+  z-index: 1;
+  width: 78%;
+}
+.indigo-section-copy h1 {
+  font-size: 72px;
+  line-height: 1.45;
+}
+.indigo-section-copy h1::after {
+  content: "";
+  display: block;
+  width: 216px;
+  height: 6px;
+  margin-top: 95px;
+  background: var(--color-8);
+}
+.indigo-section-copy p {
+  margin-top: 28px;
+  font-size: 24px;
+}
+.indigo-section-number {
+  position: absolute;
+  top: -72px;
+  right: -7px;
+  color: var(--color-5);
+  font-family: var(--indigo-display);
+  font-size: 172px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+/* Named slots keep the title full width. */
+.three-cols .indigo-body > h1,
+.split .indigo-body > h1 {
+  margin-bottom: 38px;
+}
+.indigo-three-columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  flex: 1;
+  min-height: 0;
+}
+.indigo-split-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+  flex: 1;
+  min-height: 0;
+}
+.indigo-split-left,
+.indigo-split-right {
+  min-width: 0;
+}
+.indigo-split-right {
+  border-left: 1px solid var(--indigo-line);
+  padding-left: 40px;
+}
+.indigo-split-columns h2 {
+  margin-bottom: 22px;
+}
+.indigo-split-columns p,
+.indigo-split-columns li {
+  font-size: 24px;
+}
+.indigo-data-columns {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  flex: 1;
+  min-height: 0;
+  margin-top: 8px;
+}
+.data .indigo-body > p {
+  font-size: 24px;
+  color: var(--indigo-muted);
+  margin-bottom: 14px;
+}
+.indigo-data-chart {
+  min-width: 0;
+  padding: 29px 34px;
+  background: var(--indigo-surface);
+  border: 1px solid var(--indigo-line);
+}
+.indigo-data-metric {
+  min-width: 0;
+  padding: 36px 38px;
+  background: var(--color-1);
+  color: white;
+}
+
+/* Familiar Slidev text layouts also share the theme's typography. */
+.indigo-frame.fact .indigo-body,
+.indigo-frame.statement .indigo-body,
+.indigo-frame.quote .indigo-body {
+  justify-content: center;
+}
+.fact .indigo-body > h1,
+.statement .indigo-body > h1,
+.quote .indigo-body > h1 {
+  padding: 0;
+  border: 0;
+}
+.fact .indigo-body > h1 {
+  font-size: 112px;
+  color: var(--color-6);
+}
+.statement .indigo-body > h1 {
+  font-size: 58px;
+}
+.quote .indigo-body > h1 {
+  font-size: 44px;
+  line-height: 1.6;
+}
+
+@media print {
+  .indigo-frame {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .slidev-layout *,
+  .slidev-layout *::before,
+  .slidev-layout *::after {
+    animation-duration: 0s !important;
+    transition-duration: 0s !important;
+  }
+}

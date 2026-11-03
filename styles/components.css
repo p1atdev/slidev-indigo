@@ -1,0 +1,225 @@
+.indigo-palette {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 14px;
+}
+.indigo-palette-item {
+  min-width: 0;
+}
+.indigo-swatch {
+  height: 146px;
+}
+.indigo-palette-role {
+  display: block;
+  margin-top: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--color-2);
+}
+.slidev-layout .indigo-palette-token {
+  display: block;
+  width: fit-content;
+  margin-top: 7px;
+  padding: 0;
+  background: transparent;
+  font-size: 10px;
+  color: var(--indigo-muted);
+}
+.indigo-palette-bars {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  height: 415px;
+  gap: 12px;
+}
+.indigo-palette-bars .indigo-palette-item,
+.indigo-palette-bars .indigo-swatch {
+  height: 100%;
+}
+.indigo-mesh-gradient {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-1);
+}
+.indigo-mesh-gradient::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch' seed='0'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+}
+.indigo-palette-rule {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 40px;
+  padding: 20px 24px;
+  background: var(--indigo-surface);
+  font-size: 14px;
+  color: var(--indigo-muted);
+}
+.indigo-palette-rule strong {
+  flex: none;
+  font-size: 13px;
+}
+.indigo-palette-demo {
+  margin-top: 34px;
+}
+
+.indigo-point {
+  position: relative;
+  min-width: 0;
+  padding: 39px 27px 28px;
+  border: 1px solid var(--indigo-line);
+  background: var(--indigo-surface);
+}
+.indigo-point::before {
+  content: "";
+  position: absolute;
+  inset: -1px -1px auto;
+  height: 9px;
+  background: var(--point-accent);
+}
+.indigo-point-index {
+  color: var(--point-accent);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.indigo-point-body h2 {
+  font-size: 27px;
+  margin: 34px 0 0;
+}
+.indigo-point-body h2::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 4px;
+  margin-top: 20px;
+  background: var(--point-accent);
+}
+.indigo-point-body h2 + p {
+  margin-top: 27px;
+}
+.indigo-point-body p {
+  color: var(--indigo-muted);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.indigo-chart {
+  margin: 0;
+}
+.indigo-chart-title {
+  margin-bottom: 35px;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--color-2);
+}
+.indigo-chart-row {
+  display: grid;
+  grid-template-columns: 71px minmax(0, 1fr) 62px;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+}
+.indigo-chart-label {
+  font-size: 17px;
+  font-weight: 700;
+}
+.indigo-chart-track {
+  height: 23px;
+  background: var(--indigo-track);
+}
+.indigo-chart-fill {
+  height: 100%;
+}
+.indigo-chart-value {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.slidev-layout .indigo-metric-label {
+  margin: 0;
+  font-size: 13px;
+  color: var(--indigo-on-dark);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
+}
+.indigo-metric-value {
+  margin-top: 31px;
+  font-family: var(--indigo-display);
+  font-size: 72px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+}
+.indigo-metric-rule {
+  width: 68px;
+  height: 5px;
+  margin-top: 20px;
+  background: var(--color-8);
+}
+.indigo-metric-copy {
+  margin-top: 25px;
+}
+.slidev-layout .indigo-metric-copy p {
+  margin: 0;
+  font-size: 19px;
+  color: var(--indigo-on-dark);
+  line-height: 1.6;
+}
+
+/* Mono is reserved for source code, including CSS variable names. */
+.slidev-layout code,
+.slidev-layout pre,
+.slidev-layout .shiki,
+.slidev-layout .shiki span {
+  font-family: var(--indigo-mono);
+  font-variant-ligatures: none;
+}
+.slidev-layout :not(pre) > code {
+  padding: 2px 6px;
+  background: var(--indigo-surface);
+  border-radius: 2px;
+  font-size: 0.85em;
+  color: var(--color-4);
+}
+.slidev-layout pre,
+.slidev-layout .slidev-code {
+  padding: 22px 26px !important;
+  border: 1px solid var(--indigo-line);
+  border-radius: 0;
+  background: var(--indigo-surface) !important;
+  font-size: 17px !important;
+  line-height: 1.8 !important;
+}
+.slidev-layout pre code {
+  background: transparent;
+  padding: 0;
+}
+.slidev-layout .line {
+  min-height: 1.8em;
+}
+.slidev-layout .slidev-code .highlighted {
+  background: var(--indigo-track);
+}
+.slidev-layout .slidev-code .line-numbers {
+  color: var(--indigo-muted);
+}
+.slidev-layout .slidev-code-wrapper {
+  margin: 0;
+}
+.slidev-layout .slidev-code-wrapper,
+.slidev-layout pre {
+  border-radius: 0 !important;
+}

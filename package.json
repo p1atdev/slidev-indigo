@@ -1,0 +1,55 @@
+{
+  "name": "slidev-indigo-theme",
+  "version": "0.1.0",
+  "description": "A quiet indigo Slidev theme with Japanese typography and an eight-color OKLCH palette.",
+  "keywords": [
+    "japanese",
+    "oklch",
+    "slidev",
+    "slidev-theme"
+  ],
+  "license": "MIT",
+  "files": [
+    "assets",
+    "components",
+    "layouts",
+    "setup",
+    "styles",
+    "style.css",
+    "example.md",
+    "README.md",
+    "LICENSE",
+    "preview.png"
+  ],
+  "type": "module",
+  "dependencies": {
+    "@fontsource-variable/geist-mono": "5.3.0",
+    "gen-interface-jp": "0.8.0"
+  },
+  "peerDependencies": {
+    "@slidev/client": "^53.0.0",
+    "@slidev/types": "^53.0.0",
+    "vue": "^3.5.0"
+  },
+  "engines": {
+    "slidev": ">=53.0.0"
+  },
+  "slidev": {
+    "colorSchema": "light",
+    "defaults": {
+      "aspectRatio": "16/9",
+      "canvasWidth": 1280,
+      "colorSchema": "light",
+      "transition": "fade",
+      "fonts": {
+        "provider": "none",
+        "sans": "Gen Interface JP",
+        "serif": "Gen Interface JP",
+        "mono": "Geist Mono Variable",
+        "fallbacks": false,
+        "italic": false
+      },
+      "favicon": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%3Cpath%20fill%3D%22oklch(0.25%200.08%20250)%22%20d%3D%22M0%200h64v64H0z%22%2F%3E%0A%20%20%3Cpath%20fill%3D%22oklch(0.5%200.16%20273)%22%20d%3D%22M15%2014h8v36h-8z%22%2F%3E%0A%20%20%3Cpath%20fill%3D%22oklch(0.55%200.15%20275)%22%20d%3D%22M28%2014h8v36h-8z%22%2F%3E%0A%20%20%3Cpath%20fill%3D%22oklch(0.65%200.12%20280)%22%20d%3D%22M41%2014h8v36h-8z%22%2F%3E%0A%3C%2Fsvg%3E%0A"
+    }
+  }
+}
